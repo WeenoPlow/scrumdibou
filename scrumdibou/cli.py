@@ -1,4 +1,5 @@
 import cmd
+import progress
 from quizz import Quizz
 from TestScrum import Question
 
