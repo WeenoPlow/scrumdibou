@@ -10,7 +10,7 @@ questions.append(Question(
           "A":"Answer A =>  Simplicity / Visibility / Feedback /  Adaptation",
           "B":"Answer B =>  Modesty / Courage / Transparency / Communication",
           "C":"Answer C =>  Simplicity / Transparency / Feedback /  Knowledge",
-          "D":"Answer D =>  Feedback / Courage / VIsibility /  Communication"
+          "D":"Answer D =>  Feedback / Courage / Visibility /  Communication"
         },
         10,
         "B",
@@ -33,10 +33,10 @@ questions.append(Question(
 questions.append(Question(
     'Question 3/25 : What are the main tasks of the following actors? (Product Owner)',
         {
-          "A":"Answer A =>  Maintain the process / Quards the perimeter / self-organized",
-          "B":"Answer B =>  Validates deliveries / Pilot the team / Quards the perimeter / Maintain the process",
+          "A":"Answer A =>  Maintain the process / Guards the perimeter / self-organized",
+          "B":"Answer B =>  Validates deliveries / Pilot the team / Guards the perimeter / Maintain the process",
           "C":"Answer C =>  Lead the team / Maintain the process / self-organized /  validates deliveries",
-          "D":"Answer D =>  Quards the perimeter / Validates deliveries / Co-pilot the team"
+          "D":"Answer D =>  Guards the perimeter / Validates deliveries / Co-pilot the team"
         },
         10,
         "D",
@@ -47,8 +47,8 @@ questions.append(Question(
     'Question 4/25 : What are the main tasks of the following actors? (SCRUM Master)',
         {
           "A":"Answer A =>  Pilot the team / Facilitator / Maintain the process",
-          "B":"Answer B =>  Pilot the team / cross-functionnal / Transparency",
-          "C":"Answer C =>  Facilitator / Visibility / cross-functionnals",
+          "B":"Answer B =>  Pilot the team / cross-functional / Transparency",
+          "C":"Answer C =>  Facilitator / Visibility / cross-functional",
           "D":"Answer D =>  Modesty / Courage /  Facilitator"
         },
         10,
@@ -59,10 +59,10 @@ questions.append(Question(
 questions.append(Question(
     'Question 5/25 : What are the main tasks of the following actors? (SCRUM Team)',
         {
-          "A":"Answer A =>  Facilitator / cross-functionnal /  Communication",
-          "B":"Answer B =>  Analyses and coast / Producs the system / self-organized / cross-functionnal",
-          "C":"Answer C =>  cross-functionnal / Visibility / Quards the perimeter",
-          "D":"Answer D =>  Quards the perimeter / Facilitator /  cross-functionnal / Facilitator"
+          "A":"Answer A =>  Facilitator / cross-functional /  Communication",
+          "B":"Answer B =>  Analyses and coast / Products the system / self-organized / cross-functional",
+          "C":"Answer C =>  cross-functional / Visibility / Guards the perimeter",
+          "D":"Answer D =>  Guards the perimeter / Facilitator /  cross-functional / Facilitator"
         },
         10,
         "B",
@@ -74,8 +74,8 @@ questions.append(Question(
         {
           "A":"Answer A =>  Interesting / Negotiable / Validate / Estimation / Sizable / Testable",
           "B":"Answer B =>  Independent / Negotiable / Valuable / Relevant / Sizable / Time boxed",
-          "C":"Answer C =>  Independent / Negotiable / Valuable / Estimable / Size Appropriatly / Testable",
-          "D":"Answer D =>  Interesting / Negotiable / Validated / Estimable / Size Appropriatly / time-boxed"
+          "C":"Answer C =>  Independent / Negotiable / Valuable / Estimable / Size Appropriately / Testable",
+          "D":"Answer D =>  Interesting / Negotiable / Validated / Estimable / Size Appropriately / time-boxed"
         },
         10,
         "C",
@@ -139,7 +139,7 @@ questions.append(Question(
 ))
 
 questions.append(Question(
-    'Question 11/25 : What are the Jeffies 3C\'s?',
+    'Question 11/25 : What are the Jeffries 3C\'s?',
         {
           "A":"Answer A =>  Calculation / Construction / Confirmation",
           "B":"Answer B =>  Create / Conversation / Confirmation",
@@ -170,7 +170,7 @@ questions.append(Question(
           "A":"Answer A =>  <Title> As <role>, I want <Something> To <Achieve a Goal>",
           "B":"Answer B =>  As <role>, I want <Something> To <Achieve a Goal>",
           "C":"Answer C =>  <Title> As <role>, I need <Something>",
-          "D":"Answer D =>  To <recipient>, From <Expeditor>, Subject: <Subject>"
+          "D":"Answer D =>  To <recipient>, From <expeditor>, Subject: <Subject>"
         },
         10,
         "A",
@@ -340,19 +340,28 @@ questions.append(Question(
 ))
 
 class Scrumdibou(cmd.Cmd):
-    intro = ("""
+    """
+    Commands :
 
+      start      ->  Start new quiz
+      quit       ->  Quit the quiz
+      help       ->  Display all commands
+      ?          ->  Display all commands
+
+    """
+    intro = ("""
       Welcome to
+
     #####  ##### #####  ##  ## ##       ## ####   ## #####   ####  ##  ##
    ##     ##     ##  ## ##  ## ###     ### ##  ##    ##  ## ##  ## ##  ##
    ###### ##     ####   ##  ## ####   #### ##  ## ## #####  ##  ## ##  ##
        ## ##     ## ##  ##  ## ## ## ## ## ##  ## ## ##  ## ##  ## ##  ##
    #####  ###### ##  ## #####  ##  ##   ## ####   ## ######  ####  #####
 
-  your friendly scrum evaluator
-
+  Type 'help' or '?' for more instructions
+  To begin the quiz -> Enter 'start' then press <Enter> key  :)
     """)
-    prompt = ("Scrumdibou >")
+    prompt = ("Scrumdibou>")
 
     def do_start(self, arg):
         quizz = Quizz(questions)
@@ -368,6 +377,10 @@ class Scrumdibou(cmd.Cmd):
         print()
         print("Thank you for playing !!!")
         return True
+
+    def do_help(self, arg):
+        print (self.__doc__)
+
 
 if __name__ == "__main__":
     Scrumdibou().cmdloop()
