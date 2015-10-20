@@ -3,8 +3,10 @@ import progress
 from quizz import Quizz
 from TestScrum import Question
 
+# We create an empty list
 questions = []
 
+# We add each questions in the "questions" list
 questions.append(Question(
     'Question 1/25 : What are the human values? (Check the correct group)',
         {
@@ -341,6 +343,8 @@ questions.append(Question(
 ))
 
 class Scrumdibou(cmd.Cmd):
+
+    # We define the text display when user type 'help' or '?'
     """
     Commands :
 
@@ -350,6 +354,8 @@ class Scrumdibou(cmd.Cmd):
       ?          ->  Display all commands
 
     """
+
+    # We define the intro text
     intro = ("""
       Welcome to
 
@@ -362,8 +368,10 @@ class Scrumdibou(cmd.Cmd):
   Type 'help' or '?' for more instructions
   To begin the quiz -> Enter 'start' then press <Enter> key  :)
     """)
+    # Define the prompt
     prompt = ("Scrumdibou>")
 
+    #Function of initialization (Manage Questions/Answers then the results, then the correction
     def do_start(self, arg):
         quizz = Quizz(questions)
         quizz.start()
@@ -371,14 +379,17 @@ class Scrumdibou(cmd.Cmd):
         quizz.correction()
         #quizz.save()
 
+    # Manage the highscore's display
     def do_highscore(self, arg):
         Quizz.highscore()
 
+    # Function for quit the application
     def do_quit(self, arg):
         print()
         print("Thank you for playing !!!")
         return True
 
+    # Function 'help'
     def do_help(self, arg):
         print (self.__doc__)
 

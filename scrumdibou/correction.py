@@ -5,9 +5,8 @@ Created on Oct  220 5
 
 
 
+# We create the var 'correction'. It will be displayed if user press 'yes' after the quiz to display the correction
 
-         
-   
 correction = """
 
 'Question 1: What are the human values? (Check the correct group)'
