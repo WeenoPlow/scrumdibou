@@ -14,7 +14,7 @@ correction = """
 'Answer A =>  Simplicity / Visibility / Feedback /  Adaptation' 
 'Answer B =>  Modesty / Courage / Transparency / Communication' 
 'Answer C =>  Simplicity / Transparency / Feedback /  Knowledge' 
-'Answer D =>  Feedback / Courage / VIsibility /  Communication'
+'Answer D =>  Feedback / Courage / Visibility /  Communication'
 'GOOD ANSWER : -> B' 
 
 
@@ -27,34 +27,34 @@ correction = """
 
 
 'Question 3: What are the main tasks of the following actors? (Product Owner)' 
-'Answer A =>  Maintain the process / Quards the perimeter / self-organized' 
-'Answer B =>  Validates deliveries / Pilot the team / Quards the perimeter / Maintain the process' 
+'Answer A =>  Maintain the process / Guards the perimeter / self-organized' 
+'Answer B =>  Validates deliveries / Pilot the team / Guards the perimeter / Maintain the process' 
 'Answer C =>  Lead the team / Maintain the process / self-organized /  validates deliveries' 
-'Answer D =>  Quards the perimeter / Validates deliveries / Co-pilot the team'
+'Answer D =>  Guards the perimeter / Validates deliveries / Co-pilot the team'
 'GOOD ANSWER : -> D' 
 
 
 'Question 4: What are the main tasks of the following actors? (SCRUM Master)' 
 'Answer A =>  Pilot the team / Facilitator / Maintain the process' 
-'Answer B =>  Pilot the team / cross-functionnal / Transparency' 
-'Answer C =>  Facilitator / Visibility / cross-functionnals' 
+'Answer B =>  Pilot the team / cross-functional / Transparency' 
+'Answer C =>  Facilitator / Visibility / cross-functional' 
 'Answer D =>  Modesty / Courage /  Facilitator'
 'GOOD ANSWER : -> A' 
 
 
 'Question 5: What are the main tasks of the following actors? (SCRUM Team)' 
-'Answer A =>  Facilitator / cross-functionnal /  Communication' 
-'Answer B =>  Analyses and coast / Producs the system / self-organized / cross-functionnal' 
-'Answer C =>  cross-functionnal / Visibility / Quards the perimeter' 
-'Answer D =>  Quards the perimeter / Facilitator /  cross-functionnal / Facilitator'
+'Answer A =>  Facilitator / cross-functional /  Communication' 
+'Answer B =>  Analyses and coast / Products the system / self-organized / cross-functional' 
+'Answer C =>  cross-functional / Visibility / Guards the perimeter' 
+'Answer D =>  Guards the perimeter / Facilitator /  cross-functional / Facilitator'
 'GOOD ANSWER : -> B' 
 
 
 'Question 6: What is the INVEST model?' 
 'Answer A =>  Interesting / Negotiable / Validate / Estimation / Sizable / Testable' 
 'Answer B =>  Independent / Negotiable / Valuable / Relevant / Sizable / Time boxed' 
-'Answer C =>  Independent / Negotiable / Valuable / Estimable / Size Appropriatly / Testable' 
-'Answer D =>  Interesting / Negotiable / Validated / Estimable / Size Appropriatly / time-boxed'
+'Answer C =>  Independent / Negotiable / Valuable / Estimable / Size Appropriately / Testable' 
+'Answer D =>  Interesting / Negotiable / Validated / Estimable / Size Appropriately / time-boxed'
 'GOOD ANSWER : -> C' 
 
 
