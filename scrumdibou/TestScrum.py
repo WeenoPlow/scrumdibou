@@ -23,14 +23,14 @@ class Question:
         print()
         print("-" * 60)
         print()
-        print("Vous avez {} secondes !".format(self.time-reduction))
+        print("Vous avez {} secondes !".format(self.time-reduction)) # Displays the real allotted time left to answer
         print(self.question)
 
         # Affiche les reponses possible
         for resp in sorted(self.allResponses):
             print(resp + ': '+ self.allResponses[resp])
 
-        #Initialise time
+        #Initailize time less the reduction from the difficulty lvl
         myTime = time.time()-reduction
 
         #init the variable with the answer of the user

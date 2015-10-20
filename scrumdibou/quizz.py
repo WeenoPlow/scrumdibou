@@ -11,18 +11,28 @@ class Quizz():
         self.questions = questions
 
     def start(self):
+
+        # @int goodAnswer
+        # @int reduction
         goodAnswer = 0
         reduction = 0
+
         for question in self.questions:
-            #
+
+            #Checks if the user has 5good answers
             if goodAnswer == 5 :
+
+                #Decreases the limit time by 1 more second
                 reduction = reduction+1
+
+                # resets the amount of good answers
                 goodAnswer = 0
 
             points, result, time = question.ask(reduction)
+
+            #If the result is good, adds 1 to goodAnswer
             if result == True :
                 goodAnswer = goodAnswer+1
-
 
             self.score += points
             self.track.append(result)
