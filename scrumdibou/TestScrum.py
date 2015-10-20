@@ -19,11 +19,11 @@ class Question:
         self.nbr += 1
 
     #Method to ask a question
-    def ask(self):
+    def ask(self, reduction):
         print()
         print("-" * 60)
         print()
-        print("Vous avez {} secondes !".format(self.time))
+        print("Vous avez {} secondes !".format(self.time-reduction))
         print(self.question)
 
         # Affiche les reponses possible
@@ -31,7 +31,7 @@ class Question:
             print(resp + ': '+ self.allResponses[resp])
 
         #Initialise time
-        myTime = time.time()
+        myTime = time.time()-reduction
 
         #init the variable with the answer of the user
         value = input('Your answer : ')
