@@ -19,19 +19,19 @@ class Question:
         self.nbr += 1
 
     #Method to ask a question
-    def ask(self):
+    def ask(self, reduction):
         print()
         print("-" * 60)
         print()
-        print("Vous avez {} secondes !".format(self.time))
+        print("Vous avez {} secondes !".format(self.time-reduction)) # Displays the real allotted time left to answer
         print(self.question)
 
         # Affiche les reponses possible
         for resp in sorted(self.allResponses):
             print(resp + ': '+ self.allResponses[resp])
 
-        #Initialise time
-        myTime = time.time()
+        #Initailize time less the reduction from the difficulty lvl
+        myTime = time.time()-reduction
 
         #init the variable with the answer of the user
         value = input('Your answer : ')
